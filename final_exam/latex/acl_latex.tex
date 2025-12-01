@@ -1,0 +1,184 @@
+\documentclass[11pt]{article}
+
+% Leave this alone
+\usepackage[final]{acl}
+
+% Standard package includes
+\usepackage{times}
+\usepackage{latexsym}
+
+% For proper rendering and hyphenation of words containing Latin characters (including in bib files)
+\usepackage[T1]{fontenc}
+% For Vietnamese characters
+% \usepackage[T5]{fontenc}
+% See https://www.latex-project.org/help/documentation/encguide.pdf for other character sets
+
+% This assumes your files are encoded as UTF8
+\usepackage[utf8]{inputenc}
+
+% This is not strictly necessary, and may be commented out,
+% but it will improve the layout of the manuscript,
+% and will typically save some space.
+\usepackage{microtype}
+
+% This is also not strictly necessary, and may be commented out.
+% However, it will improve the aesthetics of text in
+% the typewriter font.
+\usepackage{inconsolata}
+
+%Including images in your LaTeX document requires adding
+%additional package(s)
+\usepackage{graphicx}
+
+% If the title and author information does not fit in the area allocated, uncomment the following
+%
+%\setlength\titlebox{<dim>}
+%
+% and set <dim> to something 5cm or larger.
+
+\title{Instructions for INFO 3350 Final Project}
+
+% Author information can be set in various styles:
+% For several authors from the same institution:
+% \author{Author 1 \and ... \and Author n \\
+%         Address line \\ ... \\ Address line}
+% if the names do not fit well on one line use
+%         Author 1 \\ {\bf Author 2} \\ ... \\ {\bf Author n} \\
+% For authors from different institutions:
+% \author{Author 1 \\ Address line \\  ... \\ Address line
+%         \And  ... \And
+%         Author n \\ Address line \\ ... \\ Address line}
+% To start a separate ``row'' of authors use \AND, as in
+% \author{Author 1 \\ Address line \\  ... \\ Address line
+%         \AND
+%         Author 2 \\ Address line \\ ... \\ Address line \And
+%         Author 3 \\ Address line \\ ... \\ Address line}
+
+\author{First Author \\
+  \texttt{netid@cornell.edu} \\\And
+  Second Author \\
+  \texttt{netid@cornell.edu} \\ \And
+  Third Author \\
+  \texttt{netid@cornell.edu} \\ }
+
+
+\begin{document}
+\maketitle
+\begin{abstract}
+This is the \LaTeX{} template for the INFO 3350 Final Project. It is adapted directly from the \href{https://github.com/acl-org/acl-style-files/}{*ACL Style Templates}. If you aren't familiar with \LaTeX{}, you might want to look at that repo to get some of the basics down. You should not modify the style or section titles in this template, but any other modifications are fair game. Your final writeup should include a short abstract in this section here, as well as an original title (replacing the ``Instructions...'' placeholder above). 
+\end{abstract}
+
+\section{Introduction}
+This is where you will \textit{frame} your paper and introduce your \textit{hypothesis}. It should answer questions like: 
+\begin{enumerate}
+    \item What problem are you working on? 
+    \item Why is it interesting and important? 
+    \item What have other people said about it? 
+    \item What do you expect to find?
+\end{enumerate}
+There is no strict length requirement or limit here. You might think of this section as an extended abstract, or a long-form ``tl;dr'' for your paper. You should introduce and cite any relevant background literature here. 
+
+\section{Data}
+Here, you'll discuss what data you are using, where it came from, and how it was collected. You should note any limitations of the data (like size, bias, cleanliness, scope). 
+
+\section{Methods}
+This is where you will describe the methods you use to analyze your data and test your hypothesis. You should describe your methods \textit{such that someone without access to your code could replicate your analysis}. This is easier said than done. I do not necessarily expect math here, and a more formal description is not always better. However, if your method is novel or not something we covered directly in class, it's up to you to sufficiently explain and justify your approach. If you have lots of moving parts, diagrams are great.  
+
+If you want to add an equation and reference it later, you can do this like so: 
+
+\begin{equation}\label{eq:example}
+    h = \sigma(\mathbf{W}x + b)    
+\end{equation}
+
+Now I can reference it as Equation \ref{eq:example}.
+
+
+\section{Results}
+This is where you will tell (and show) us what you found with your analysis: what did you find, and how did you find it? 
+
+This section must include figures generated using Seaborn, Matplotlib, or similar. These figures should be clear (axes and legends labeled, legible color scheme, appropriate font size). All figures should include an informative caption. Be sure to include confidence intervals or other measures of statistical significance/uncertainty where appropriate. For an example of how to format figures in this \LaTeX{} template, see Figure \ref{fig:experiments} and Figure \ref{fig:sidebyside}.
+
+\section{Discussion}
+The Discussion section is for tying everything together: what does it all mean? Do your results support your hypothesis? Why or why not?
+
+\section{Limitations}
+What are the limitations of your study? You don't need to sell your results short, but you should acknowledge to what extent your findings are limited by your methods, data, model scale, etc. Include an acknowledgment and description of any AI usage in this section. You should have at least one paragraph here. 
+
+ 
+
+\begin{figure}[t]
+  \includegraphics[width=\columnwidth]{example-image-golden}
+  \caption{A figure with a caption that runs for more than one line.}
+  \label{fig:experiments}
+\end{figure}
+
+\begin{figure*}[ht]
+  \includegraphics[width=0.48\linewidth]{example-image-a} \hfill
+  \includegraphics[width=0.48\linewidth]{example-image-b}
+  \caption {A minimal working example to demonstrate how to place
+    two images side-by-side.}
+  \label{fig:sidebyside}
+\end{figure*}
+
+\section*{Acknowledgments}
+You don't need an Acknowledgements section (though you are welcome to include one!). Because I have directly adapted this template from the *ACL style files, I have included the original acknowledgments from the source template below: 
+
+The original document has been adapted
+by Steven Bethard, Ryan Cotterell and Rui Yan
+from the instructions for earlier ACL and NAACL proceedings, including those for
+ACL 2019 by Douwe Kiela and Ivan Vuli\'{c},
+NAACL 2019 by Stephanie Lukin and Alla Roskovskaya,
+ACL 2018 by Shay Cohen, Kevin Gimpel, and Wei Lu,
+NAACL 2018 by Margaret Mitchell and Stephanie Lukin,
+Bib\TeX{} suggestions for (NA)ACL 2017/2018 from Jason Eisner,
+ACL 2017 by Dan Gildea and Min-Yen Kan,
+NAACL 2017 by Margaret Mitchell,
+ACL 2012 by Maggie Li and Michael White,
+ACL 2010 by Jing-Shin Chang and Philipp Koehn,
+ACL 2008 by Johanna D. Moore, Simone Teufel, James Allan, and Sadaoki Furui,
+ACL 2005 by Hwee Tou Ng and Kemal Oflazer,
+ACL 2002 by Eugene Charniak and Dekang Lin,
+and earlier ACL and EACL formats written by several people, including
+John Chen, Henry S. Thompson and Donald Walker.
+
+\bibliography{custom}
+
+\appendix
+
+
+
+
+
+
+\section{Appendix}
+\label{sec:appendix}
+You don't need an Appendix, but this is where you could include extra information, supplementary figures, or additional equations that supplement the main body of the project writeup. You should not include anything in the Appendix that is strictly necessary for the reader to see/read in order to understand your paper. When submitting a paper for review, it is often the case that the reviewers are not required to read the Appendix. 
+
+Since there is no strict length requirement or limit for the final project, there isn't much reason to include an Appendix, \textit{unless} you want to describe something that doesn't fit into the narrative flow of the rest of the writeup.
+
+\begin{table*}
+  \centering
+  \begin{tabular}{lll}
+    \hline
+    \textbf{Output}           & \textbf{natbib command} & \textbf{ACL only command} \\
+    \hline
+    \citep{Gusfield:97}       & \verb|\citep|           &                           \\
+    \citealp{Gusfield:97}     & \verb|\citealp|         &                           \\
+    \citet{Gusfield:97}       & \verb|\citet|           &                           \\
+    \citeyearpar{Gusfield:97} & \verb|\citeyearpar|     &                           \\
+    \citeposs{Gusfield:97}    &                         & \verb|\citeposs|          \\
+    \hline
+  \end{tabular}
+  \caption{\label{citation-guide}
+    This is an example of how you can create a table. It shows citation commands supported by the style file.
+    The style is based on the natbib package and supports all natbib citation commands.
+    See the original *ACL template for more information.
+  }
+  \end{table*}
+
+\subsection{A note on references}
+You should cite any papers, datasets, blogs, websites, models, GitHub repos, books, ANYTHING that you rely on to complete this project. When in doubt, cite! Obviously, failure to appropriately cite work (or any plagiarism) will constitute an academic integrity violation. 
+
+To cite something, create an entry for the work in the \texttt{custom.bib} file. Then, you can reference it using one of the commands given in Table \ref{citation-guide} included here. Consider the difference between citing a paper in this way \citep{Gusfield:97}, versus saying something like ``\citet{Gusfield:97} has shown that...''. If you add and cite your references correctly, the template will automatically create a bibliography for you. 
+
+\end{document}
